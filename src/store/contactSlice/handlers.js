@@ -19,9 +19,7 @@ export function handleFulfilledAdd(state, { payload }) {
 }
 
 export function handleFulfilledDelete(state, { payload }) {
-  console.log(payload);
   const index = state.contacts.findIndex(contact => contact.id === payload.id);
-  console.log(index);
   state.contacts.splice(index, 1);
   state.isLoading = false;
 }

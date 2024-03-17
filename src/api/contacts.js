@@ -9,14 +9,10 @@ export async function getContactsApi() {
 
 export async function addContactApi(name, phone) {
   const { data } = await axios.post('/contacts', { name, phone });
-  console.log(data);
   return data;
 }
 
 export async function deleteContactApi(id) {
-  console.log(id);
   const { data } = await axios.delete(`/contacts/${id}`);
-
-  console.log(data);
   return data;
 }
